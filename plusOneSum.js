@@ -1,10 +1,10 @@
 'use strict';
+
 //Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each. Write tests instead of console.logs
-
-//IN - array
-//OUT - number
-
 // plusOneSum([1, 2, 3, 4]); // 14
+
+//INPUT - array
+//OUTPUT - number
 
 var array = [1, 2, 3, 4];
 var newArray = [];
@@ -21,9 +21,10 @@ function plusOneSum (array) {
     for(var j = 0; j < newArray.length; j++) {
       //sum all numb
       sum += array[j];
-      console.log(sum);
+      // console.log(sum);
     }
-  console.log(array);
+  console.log(sum);
+  return sum;
 };
 
 plusOneSum(array);

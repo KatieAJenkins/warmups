@@ -22,7 +22,7 @@
 //INPUTS: number
 //OUTPUTS: number
 //LOGIC: pass a number into function
-function checkIfNegative(num) {
+function factorials(num) {
   //INPUT: number
   //OUTPUT: boolean
   //LOGIC: compare number to see if it is less than 0, if true return -1
@@ -36,23 +36,23 @@ function checkIfNegative(num) {
   else if (num == 0) {
       return 1;
   }
-  
+
   //INPUT: number
   //OUTPUT: number
-  //LOGIC: if number does not meet above conditions, take number minus 1, check if that number is greater or equal to 0. if not, subtract 1 from the number. multiply that number by itself and return answer.
+  //LOGIC: pass number in and function will continue to call on itself until it reaches 0
   else {
-      return (num * checkIfNegative(num - 1));
+      return (num * factorials(num - 1));
   }
 }
 
-var result = checkIfNegative(-1);
+var result = factorials(-1);
 // INPUT: number (-1)
 // OUTPUT: number (-1)
 
-var result = checkIfNegative(0);
+var result = factorials(0);
 //INPUT: number (0)
 //OUTPUT: number (1)
 
-var result = checkIfNegative(8);
+var result = factorials(8);
 //INPUT: number (8)
 //OUTPUT: number (56)

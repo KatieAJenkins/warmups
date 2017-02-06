@@ -56,3 +56,5 @@ var result = factorials(0);
 var result = factorials(8);
 //INPUT: number (8)
 //OUTPUT: number (56)
+
+//recursion! base case = how do I get out of infinite loop of function calling itself. First part, checks for negative number. Second part, if the number is 0, return 1 (this is how you get out of condition). Third, return (8 * factorials(8-1)). Continue calling this function until the function returns 1 which is the else if statement (2nd). This will end the loop.

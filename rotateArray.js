@@ -8,10 +8,14 @@
 var array = [1,2,3,4,5,6,7];
 
 function toRight(array, number){
+  //loop through array number of times you want to rotate
+    // array.unshift(array.pop());
   for(var i = 0; i < number; i++){
-    array.unshift(array.pop());
+    //pop the last number
+    //unshift popped number to the front
+    console.log(array.unshift(array.pop()));
   }
-  console.log(array);
+  // console.log(array);
   return array;
 }
 

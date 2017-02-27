@@ -74,19 +74,44 @@ function replaceValue (array, string, index){
 replaceValue(array, "boy", 1);
 // console.log(array);
 
-//swap values at index1 and index2
+// Define a function named swap that takes 3 arguments:
+//  - an array
+//  - index1 (a number)
+//  - index2 (a number)
+//
+// Swap the values at index1 and index2
+//
+// Example: swap(['a', 'b', 'c', 'd'], 0, 2) would change the input array to ['c', 'b', 'a', 'd']
+//
+// NOTE: you'll need a temporary variable to accomplish this
 
-function swap(arr, index1, index2){
-  console.log(arr);
+// function swap(arr, index1, index2){
+//   console.log(arr);
+//   var temp;
+//   temp = arr[index1];
+//   arr[index1] = arr[index2];
+//   arr[index2] = temp;
+//   console.log(arr);
+// }
+//
+// console.log(swap([0,1,2,3,4],2,4));
+
+var array = [0,1,2,3,4];
+
+function swap (array, index1, index2){
   var temp;
-  temp = arr[index1];
-  arr[index1] = arr[index2];
-  arr[index2] = temp;
-  console.log(arr);
+
+  temp = array[index1];
+  console.log(array[index1]);
+  console.log(temp);
+  array[index1] = array[index2];
+  array[index2] = temp;
+
+  console.log(array);
+
 }
 
-console.log(swap([0,1,2,3,4],2,4));
-
+swap(array,2,4);
 
 //swapValues takes array and 2 values - swap these 2
 
@@ -128,16 +153,6 @@ swapValues([])
 
 
 
-// Define a function named swap that takes 3 arguments:
-//  - an array
-//  - index1 (a number)
-//  - index2 (a number)
-//
-// Swap the values at index1 and index2
-//
-// Example: swap(['a', 'b', 'c', 'd'], 0, 2) would change the input array to ['c', 'b', 'a', 'd']
-//
-// NOTE: you'll need a temporary variable to accomplish this
 
 
 

@@ -131,36 +131,6 @@ function contains(array, value){
 
 contains(['a', 'b', 'c', 'd'], 'b');
 
-
-//swapValues takes array and 2 values - swap these 2
-
-function swapValues(arr,val1,val2){
-  var index1 = arr.indexOf(val1);
-  var index2 = arr.indexOf(val2);
-  var temp;
-
-  if(index1 === -1 || index2 === -1){
-    return "one of the numbers does not exist in the array"
-  }
-
-  temp = arr[index1];
-  arr[index1] = arr[index2];
-  arr[index2] = temp;
-  //can also do this without temp!
-  //arr[index1] = val2;
-  //arr[index2] = val1;
-
-  console.log(arr);
-  return arr;
-}
-//test this adding in values
-swapValues([])
-
-
-
-
-
-
 // Define a function named swapValues that takes 3 arguments:
 //  - an array
 //  - value1 (an item from the array)
@@ -170,6 +140,42 @@ swapValues([])
 //
 // Example: swapValues(['a', 'b', 'c', 'd'], 'b', 'd') would change the input array to ['a', 'd', 'c', 'b']
 
+// function swapValues(array ,value1,value2){
+//   var index1 = array.indexOf(value1);
+//   var index2 = array.indexOf(value2);
+//   var temp;
+//
+//   if(index1 === -1 || index2 === -1){
+//     return "one of the numbers does not exist in the array"
+//   }
+//
+//   temp = arr[index1];
+//   arr[index1] = arr[index2];
+//   arr[index2] = temp;
+//   //can also do this without temp!
+//   //arr[index1] = val2;
+//   //arr[index2] = val1;
+//
+//   console.log(arr);
+//   return arr;
+// }
+
+function swapValues (array, value1, value2){
+  var index1 = array.indexOf(value1);
+  console.log(index1);
+  var index2 = array.indexOf(value2);
+  console.log(index2);
+  var temp;
+
+  temp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temp;
+
+  console.log(array);
+}
+
+
+swapValues(['a', 'b', 'c', 'd'], 'b', 'd');
 
 
 // Define a function named getSpeed that takes 2 arguments:

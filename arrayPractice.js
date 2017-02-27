@@ -102,16 +102,35 @@ function swap (array, index1, index2){
   var temp;
 
   temp = array[index1];
-  console.log(array[index1]);
-  console.log(temp);
   array[index1] = array[index2];
   array[index2] = temp;
 
-  console.log(array);
+  // console.log(array);
 
 }
 
 swap(array,2,4);
+
+// ------------
+// Find the position of an element using .indexOf()
+// ------------
+
+// Define a function named contains that takes 2 arguments:
+//  - an array
+//  - a value
+//
+// Swap the position of the two values in the array
+//
+// Example: contains(['a', 'b', 'c', 'd'], 'a') would return true
+// Example: contains(['a', 'b', 'c', 'd'], 'z') would return false
+
+function contains(array, value){
+  // console.log(array.indexOf(value));
+  array.indexOf(value);
+}
+
+contains(['a', 'b', 'c', 'd'], 'b');
+
 
 //swapValues takes array and 2 values - swap these 2
 
@@ -137,39 +156,8 @@ function swapValues(arr,val1,val2){
 //test this adding in values
 swapValues([])
 
-//
-
-// Write an Object literal
-// Write an Array literal
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ------------
-// Find the position of an element using .indexOf()
-// ------------
-
-// Define a function named contains that takes 3 arguments:
-//  - an array
-//  - a value
-//
-// Swap the position of the two values in the array
-//
-// Example: contains(['a', 'b', 'c', 'd'], 'a') would return true
-// Example: contains(['a', 'b', 'c', 'd'], 'z') would return false
 
 
 

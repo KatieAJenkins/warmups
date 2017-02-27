@@ -171,7 +171,8 @@ function swapValues (array, value1, value2){
   array[index1] = array[index2];
   array[index2] = temp;
 
-  console.log(array);
+  // console.log(array);
+  return array;
 }
 
 
@@ -187,6 +188,20 @@ swapValues(['a', 'b', 'c', 'd'], 'b', 'd');
 // Example: getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "BMW") would return 175
 // Example: getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "Porsche") would return 210
 
+function getSpeed(array, string){
+  //find if BMW is in list, if not return message
+  if (array.indexOf(string) < 0){
+    return "string must be in the array";
+  }
+
+  //find position of BMW
+  //find next index (+1) to find speed
+  var indexOfString = array.indexOf(string) + 1;
+  console.log(indexOfString);
+  console.log("speed is " , array[indexOfString]);
+}
+
+console.log(getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "BMW"));
 
 
 // Define a function named cellValue that takes 3 arguments:

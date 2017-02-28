@@ -268,7 +268,14 @@ function sumEdges(array){
   return firstElement + lastElement;
 }
 
-sumEdges([3,4,5])
+sumEdges([3,4,5]);
+
+//
+// ---------
+// // JOIN
+// ---------
+//
+
 // Define a function named bassackwards that takes 2 arguments:
 //  - an array
 //  - a delimiter
@@ -278,6 +285,17 @@ sumEdges([3,4,5])
 // Example: bassackwards([3,4,5], "-") would return "5-4-3"
 //
 // See docs for most appropriate method
+
+var bassArray = [3,4,5];
+
+function bassackwards() {
+  // console.log(bassArray.reverse().join("-"));
+  var newArray = bassArray.reverse().join("-");
+  console.log(newArray);
+  console.log(newArray.toString());
+}
+
+bassackwards([3,4,5], "-");
 
 // -----------------
 // // SORT & REVERSE

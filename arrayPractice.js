@@ -214,7 +214,9 @@ function getSpeed(array, string){
 // Example: cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "model") would return "Nova"
 // Example: cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "year") would return 1977
 
+function cellValue(){
 
+}
 
 // -----------------
 // // PUSH & UNSHIFT
@@ -231,7 +233,9 @@ function getSpeed(array, string){
 //
 //PUSH --> adds element to end of array
 //UNSHIFT --> adds element to beginning of array
-//not able to string together two methods
+//not able to string together two methods, mutates original array
+
+//cannot chain commands .unshift(value).push() because .push value would be the product of .unshift(value) which is an index. So pushing the index onto the array wouldn't make sense.
 
 let sammichArray = ['a', 'b'];
 
@@ -241,7 +245,7 @@ function sandwich(array, value){
   console.log(sammichArray);
 }
 
-sandwich(['a', 'b'], 'z')
+sandwich(['a', 'b'], 'z');
 
 // -----------------
 // // POP & SHIFT
@@ -264,8 +268,9 @@ function sumEdges(array){
   // console.log(firstElement);
   var lastElement = array.pop();
   // console.log(lastElement);
+  return array.shift() + array.pop();
   // console.log(firstElement + lastElement);
-  return firstElement + lastElement;
+  // return firstElement + lastElement;
 }
 
 sumEdges([3,4,5]);
@@ -285,16 +290,26 @@ sumEdges([3,4,5]);
 // Example: bassackwards([3,4,5], "-") would return "5-4-3"
 //
 // See docs for most appropriate method
+//join also creates a string and then adds a delimiter to it
 
 var bassArray = [3,4,5];
 
-function bassackwards() {
+function bassackwards(array, delimiter) {
   // console.log(bassArray.reverse().join("-"));
-  var newArray = bassArray.reverse().join("-");
-  console.log(newArray);
+  var newArray = bassArray.reverse().join(delimiter);
+  // console.log(newArray);
   console.log(newArray.toString());
 }
 
+//another method!
+function bassackwards(array, delimiter){
+  var newArr = [];
+  for(var i =0; i < array.length; i++){
+    //take the first item in the bassArray and add to the new list
+    newArr.unshift(array[i]);
+  }
+    console.log(newArr.join(delimiter));
+}
 bassackwards([3,4,5], "-");
 
 // -----------------

@@ -443,8 +443,9 @@ var females = people.filter(function(person){
 //array.slice(begin, end);
 
 function window (array, start, end){
-  console.log(array.slice(start,end));
-  console.log(array);
+  // console.log(array.slice(start,end));
+  return array.slice(start , end);
+  // console.log(array);
 }
 
 window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
@@ -456,12 +457,48 @@ window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 //
 // Return an array that contains only the elements that would fall in the given page / size
 // If pageSize is smaller than 1, return the results for page 1
+
+/////can use this function to set number of search results on a page!!!!!!
+
 //
 // Example: paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 1, 2) would return [ 'a', 'b' ]
 // Example: paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 2, 2) would return [ 'c', 'd' ]
 // Example: paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 2) would return [ 'e', 'f' ]
 // Example: paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 1, 5) would return [ 'a', 'b', 'c', 'd', 'e' ]
 
+function paginate(array, pgNumber, pgSize){
+  // var numElements = array.length;
+  // var resultArray = [];
+  //
+  // if(array.length){
+  //   var elementsToDisplayPerPage = numElements / pgSize;
+  // }
+  //
+  // for(var i = 0; i < elementsToDisplayPerPage; i++){
+  //   console.log(resultArray.push(array[i]));
+  // }
+  // console.log(resultArray);
+
+  console.log(array.slice(pgNumber, pgSize));
+  //
+  // var numElements = arr.length;
+  // var resultArray = [];
+  //
+  // if(numElements) {
+  //   var start = pageSize * (pgNumber -1);
+  //   console.log(start);
+  // }
+
+  if(numElements){
+    var start = pageSize * (pgNumber -1);
+    var end = start + pageSize;
+  }
+  result = arr.slice(start, end);
+}
+
+paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 1, 3)
+
+paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 2)
 
 
 // Define a function named deleteBetween that takes 3 arguments:
@@ -473,5 +510,7 @@ window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 //
 // Example: deleteBetween([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 'a', 'i') would return [ 'a', 'i' ]
 // Example: deleteBetween([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 'd', 'f') would return [ 'a', 'b', 'c', 'd', 'f', 'g', 'h', 'i' ]
-//
+
+
+////// mutates the original array!
 // See splice

@@ -216,9 +216,9 @@ function getSpeed(array, string){
 
 
 
-// -------------
-// // Use methods on arrays
-// -------------
+// -----------------
+// // PUSH & UNSHIFT
+// -----------------
 //
 
 
@@ -230,9 +230,19 @@ function getSpeed(array, string){
 //
 // Example: sandwich(['a', 'b'], 'z') would change the input array to ['z', 'a', 'b', 'z']
 //
-// See unshift, push
+//PUSH --> adds element to end of array
+//UNSHIFT --> adds element to beginning of array
+//not able to string together two methods
 
+let sammichArray = ['a', 'b'];
 
+function sandwich(array, value){
+  sammichArray.push(value);
+  sammichArray.unshift(value);
+  console.log(sammichArray);
+}
+
+sandwich(['a', 'b'], 'z')
 
 // Define a function named sumEdges that takes 1 argument:
 //  - an array
@@ -302,7 +312,7 @@ array.sort().reverse();
 // // FILTER
 // ----------
 //
-
+//TODO
 //1. takes one argument (people), a function to run for each element in array
 //2. function passed to filter takes on argument (person), current element of array filter is in
 
@@ -328,11 +338,13 @@ const people = [
 ];
 
 //find females
-let females = people.filter(function(person){
+var females = people.filter(function(person){
   //only return objects that have key gender = f
-  console.log(person.gender === 'f');
-  console.log(person.name.gender === 'f');
-})
+  // console.log(person.gender === 'f');
+  // console.log(person.name.gender === 'f');
+  // console.log(females);
+});
+// console.table(females);
 
 // Define a function named gather that takes 3 arguments, all arrays:
 //

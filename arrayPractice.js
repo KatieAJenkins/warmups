@@ -264,7 +264,33 @@ console.log(getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "BMW"));
 //
 // Example: sortNumbers([1,11,2,22,56,7]) would return [ 1, 2, 7, 11, 22, 56 ]
 
+////Sort nums ascending & strings alphabetically in array
 
+var array = [1, 11, 2, 22, 56, 7];
+console.log(array.sort());
+
+function sortNumbers(array) {
+  // console.log(sortArray.sort());
+  // var sortedArray = array.sort();
+  console.log(array.sort());
+  // console.log(sortedArray);
+  // console.log(array);
+}
+
+sortNumbers(array);
+
+//pass in parameter which is sorting function
+//looks at every item in array and determines if current one is smaller than next one
+//to sort backwards, a > b
+array.sort((a,b) => {
+  //a = current item in array
+  //b = next item in array
+  return a < b;
+})
+
+//reverse array after sorting it
+array.sort().reverse();
+console.log(array);
 
 // Define a function named gather that takes 3 arguments, all arrays:
 //

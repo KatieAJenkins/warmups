@@ -162,9 +162,9 @@ contains(['a', 'b', 'c', 'd'], 'b');
 
 function swapValues (array, value1, value2){
   var index1 = array.indexOf(value1);
-  console.log(index1);
+  // console.log(index1);
   var index2 = array.indexOf(value2);
-  console.log(index2);
+  // console.log(index2);
   var temp;
 
   temp = array[index1];
@@ -197,11 +197,11 @@ function getSpeed(array, string){
   //find position of BMW
   //find next index (+1) to find speed
   var indexOfString = array.indexOf(string) + 1;
-  console.log(indexOfString);
-  console.log("speed is " , array[indexOfString]);
+  // console.log(indexOfString);
+  // console.log("speed is " , array[indexOfString]);
 }
 
-console.log(getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "BMW"));
+// console.log(getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "BMW"));
 
 
 // Define a function named cellValue that takes 3 arguments:
@@ -256,6 +256,10 @@ console.log(getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "BMW"));
 //
 // See docs for most appropriate method
 
+// -----------------
+// // SORT & REVERSE
+// -----------------
+//
 
 // Define a function named sortNumbers that takes  argument:
 //  - an array
@@ -267,12 +271,12 @@ console.log(getSpeed(["Chevy Tracker", 75, "BMW", 175, "Porsche", 210], "BMW"));
 ////Sort nums ascending & strings alphabetically in array
 
 var array = [1, 11, 2, 22, 56, 7];
-console.log(array.sort());
+// console.log(array.sort());
 
 function sortNumbers(array) {
   // console.log(sortArray.sort());
   // var sortedArray = array.sort();
-  console.log(array.sort());
+  // console.log(array.sort());
   // console.log(sortedArray);
   // console.log(array);
 }
@@ -289,8 +293,46 @@ array.sort((a,b) => {
 })
 
 //reverse array after sorting it
+//no parameters
 array.sort().reverse();
-console.log(array);
+// array.reverse();
+// console.log(array);
+
+// ----------
+// // FILTER
+// ----------
+//
+
+//1. takes one argument (people), a function to run for each element in array
+//2. function passed to filter takes on argument (person), current element of array filter is in
+
+const people = [
+  {
+    name: 'Brando',
+    age: 35,
+    gender: 'm',
+    co: true
+  },
+  {
+    name: 'Rynn',
+    age: 2,
+    gender: 'f',
+    co: false
+  },
+  {
+    name: 'Reed',
+    age: 1,
+    gender: 'm',
+    co: false
+  }
+];
+
+//find females
+let females = people.filter(function(person){
+  //only return objects that have key gender = f
+  console.log(person.gender === 'f');
+  console.log(person.name.gender === 'f');
+})
 
 // Define a function named gather that takes 3 arguments, all arrays:
 //

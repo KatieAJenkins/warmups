@@ -325,19 +325,30 @@ bassackwards([3,4,5], "-");
 // Example: sortNumbers([1,11,2,22,56,7]) would return [ 1, 2, 7, 11, 22, 56 ]
 
 ////Sort nums ascending & strings alphabetically in array
+////.sort() <-- will only sort strings
+////.sort(a-b) <--use this to sort numbers **checkout docs!**
 
-var array = [1, 11, 2, 22, 56, 7];
+var numbers = [1, 11, 2, 22, 56, 7];
 // console.log(array.sort());
 
-function sortNumbers(array) {
-  // console.log(sortArray.sort());
+// function sortNumbers(array) {
+//   console.log(array.sort());
   // var sortedArray = array.sort();
   // console.log(array.sort());
   // console.log(sortedArray);
   // console.log(array);
+// }
+
+function sortNumbers(numbers){
+  return numbers.sort(function(a,b) {
+    //looks at each value and compares them
+    //based on what is returned (positive, negative, 0)
+    return a - b;
+  });
 }
 
-sortNumbers(array);
+sortNumbers(numbers);
+// console.log(numbers);
 
 //pass in parameter which is sorting function
 //looks at every item in array and determines if current one is smaller than next one
@@ -353,6 +364,20 @@ array.sort((a,b) => {
 array.sort().reverse();
 // array.reverse();
 // console.log(array);
+
+var array1 = ['a' ,'b'];
+var array2 = ['z' , 'y' ];
+var array3 = ["t" , "s"];
+
+
+function gather(arr1, arr2, arr3){
+
+  var newArray = arr1.concat(arr2, arr3);
+  console.log(newArray);
+  console.log(newArray.sort());
+}
+
+gather(array1, array2, array3);
 
 // ----------
 // // FILTER

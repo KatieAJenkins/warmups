@@ -365,10 +365,18 @@ array.sort().reverse();
 // array.reverse();
 // console.log(array);
 
+
+// Define a function named gather that takes 3 arguments, all arrays:
+//
+// Return a single array that contains all elements of all arrays, sorted
+//
+// Example: gather(['z','y'], ['a'], ['p', 'q', 'd']) would return [ 'a', 'd', 'p', 'q', 'y', 'z' ]
+//
+// NOTE: do not use any kind of loop to accomplish this.  Find the appropriate method in the docs
+
 var array1 = ['a' ,'b'];
 var array2 = ['z' , 'y' ];
 var array3 = ["t" , "s"];
-
 
 function gather(arr1, arr2, arr3){
 
@@ -417,15 +425,6 @@ var females = people.filter(function(person){
 });
 // console.table(females);
 
-// Define a function named gather that takes 3 arguments, all arrays:
-//
-// Return a single array that contains all elements of all arrays, sorted
-//
-// Example: gather(['z','y'], ['a'], ['p', 'q', 'd']) would return [ 'a', 'd', 'p', 'q', 'y', 'z' ]
-//
-// NOTE: do not use any kind of loop to accomplish this.  Find the appropriate method in the docs
-
-
 
 // Define a function named window that takes 3 arguments:
 //  - an array
@@ -435,10 +434,20 @@ var females = people.filter(function(person){
 // Return an array that only contains elements from the given start index to the given end index
 //
 // Example: window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6) would return [ 'd', 'e', 'f' ]
-//
+
+/////does not mutate the original array
+
 // See slice
+//array.slice();
+//array.slice(begin);
+//array.slice(begin, end);
 
+function window (array, start, end){
+  console.log(array.slice(start,end));
+  console.log(array);
+}
 
+window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 
 // Define a function named paginate that takes 3 arguments:
 //  - an array

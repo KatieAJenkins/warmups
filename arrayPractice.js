@@ -221,7 +221,6 @@ function getSpeed(array, string){
 // -----------------
 //
 
-
 // Define a function named sandwich that takes 2 arguments:
 //  - an array
 //  - a value
@@ -244,6 +243,11 @@ function sandwich(array, value){
 
 sandwich(['a', 'b'], 'z')
 
+// -----------------
+// // POP & SHIFT
+// -----------------
+//
+
 // Define a function named sumEdges that takes 1 argument:
 //  - an array
 //
@@ -254,8 +258,17 @@ sandwich(['a', 'b'], 'z')
 //
 // See shift, pop
 
+function sumEdges(array){
+  //remove first element from array
+  var firstElement = array.shift();
+  // console.log(firstElement);
+  var lastElement = array.pop();
+  // console.log(lastElement);
+  // console.log(firstElement + lastElement);
+  return firstElement + lastElement;
+}
 
-
+sumEdges([3,4,5])
 // Define a function named bassackwards that takes 2 arguments:
 //  - an array
 //  - a delimiter

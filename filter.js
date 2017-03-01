@@ -27,10 +27,11 @@ console.log(onlyEven(numArr));
 
 var array = ["Angelica", "Eliza", "and Peggy"];
 function onlyOneWord (array) {
- //return an array with phrases containing 1 word
- 
+  return array.filter(function(string) {
+    return !string.includes(" ");
+  });
 }
-// console.log(onlyOneWord(array));
+console.log(onlyOneWord(array));
 
 var users = [{ character: 'Superman', hero: true },
              { character: 'Sinestro', hero: false },
@@ -41,10 +42,21 @@ var users = [{ character: 'Superman', hero: true },
 
 function findHeroes(array){
   //return an array with only heroes
+  return array.filter(function(user) {
+    //access the object properties
+    return user.hero;
+  });
 }
-// console.log(findHeroes(users));
+console.log(findHeroes(users));
 
 function findHeroNames(array){
   //return an array with only heroes
+  //example of chaining 2 higher order functions
+  return array.filter(function(user) {
+    return user.hero;
+  })
+  .map(function(obj) {
+    return obj.character;
+  });
 }
-// console.log(findHeroNames(users));
+console.log(findHeroNames(users));

@@ -241,8 +241,9 @@ let sammichArray = ['a', 'b'];
 
 function sandwich(array, value){
   sammichArray.push(value);
-  sammichArray.unshift(value);
-  console.log(sammichArray);
+  // sammichArray.unshift(value);
+  console.log('push ', sammichArray);
+  // console.log('unshift ', sammichArray);
 }
 
 sandwich(['a', 'b'], 'z');
@@ -275,6 +276,12 @@ function sumEdges(array){
 
 sumEdges([3,4,5]);
 
+function testPop(array) {
+  array.pop();
+  console.log('test pop' ,array);
+};
+
+testPop([3,4,5]);
 //
 // ---------
 // // JOIN
@@ -467,8 +474,8 @@ var females = people.filter(function(person){
 //start = includes this number, end = does not include number
 
 function window (array, start, end){
-  // console.log(array.slice(start,end));
-  return array.slice(start , end);
+  console.log('slice ', array.slice(start,end));
+  // return array.slice(start , end);
   // console.log(array);
 }
 window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
@@ -542,7 +549,7 @@ window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 
 var arr1 = [0,2,3,4];
 
-console.log(arr1.splice(2,2));
+console.log('splice ', arr1.splice(2,2));
 
 ////Additional practice
 

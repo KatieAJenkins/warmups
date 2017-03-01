@@ -59,4 +59,23 @@ function findHeroNames(array){
     return obj.character;
   });
 }
+// console.log(findHeroNames(users));
+
+//using reduce (previousValue, currentValue)
+//takes 1. function as argument as well as 2. starting point
+//previous will be empty array on first iteration, what is my starting point ==> put the empty array at the end of the function
+//return previous every time we are looping
+//current = this object
+function findHeroNames(array){
+  return array.reduce(function(current, previous) {
+    if (current.hero) {
+     previous.push(current.character);
+    };
+    console.log(previous);
+    return previous;
+  },
+
+  ["this is starting point!"]); //[] is the 2nd argument to reduce function
+}
+
 console.log(findHeroNames(users));

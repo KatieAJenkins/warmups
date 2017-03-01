@@ -303,13 +303,14 @@ function bassackwards(array, delimiter) {
 
 //another method!
 function bassackwards(array, delimiter){
-  var newArr = [];
+  var newArr = []; //create this outside of loop bc you don't want to recreate every time
   for(var i =0; i < array.length; i++){
-    //take the first item in the bassArray and add to the new list
+    //take the first item in the bassArray and add to beginning of the new list
     newArr.unshift(array[i]);
   }
     console.log(newArr.join(delimiter));
 }
+
 bassackwards([3,4,5], "-");
 
 // -----------------
@@ -328,7 +329,7 @@ bassackwards([3,4,5], "-");
 ////.sort() <-- will only sort strings
 ////.sort(a-b) <--use this to sort numbers **checkout docs!**
 
-var numbers = [1, 11, 2, 22, 56, 7];
+// var numbers = [1, 11, 2, 22, 56, 7];
 // console.log(array.sort());
 
 // function sortNumbers(array) {
@@ -347,7 +348,7 @@ function sortNumbers(numbers){
   });
 }
 
-sortNumbers(numbers);
+// sortNumbers(numbers);
 // console.log(numbers);
 
 //pass in parameter which is sorting function
@@ -386,6 +387,21 @@ function gather(arr1, arr2, arr3){
 }
 
 gather(array1, array2, array3);
+
+//concat doesn't change first array --> does not mutate
+var array1 = [1,2,3];
+var array2 = [4,5,6];
+var array3 = [7,8,9];
+
+//new array
+var newArray = array1.concat(array2,array3);
+
+//mutate original array
+array1 = array1.concat(array2,array3);
+console.log(array1);
+
+//can start with a blank array
+console.log([].concat(array1, array2, array3));
 
 // ----------
 // // FILTER
@@ -441,13 +457,13 @@ var females = people.filter(function(person){
 //array.slice();
 //array.slice(begin);
 //array.slice(begin, end);
+//start = includes this number, end = does not include number
 
 function window (array, start, end){
   // console.log(array.slice(start,end));
   return array.slice(start , end);
   // console.log(array);
 }
-
 window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 
 // Define a function named paginate that takes 3 arguments:
@@ -466,7 +482,7 @@ window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 // Example: paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 2) would return [ 'e', 'f' ]
 // Example: paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 1, 5) would return [ 'a', 'b', 'c', 'd', 'e' ]
 
-function paginate(array, pgNumber, pgSize){
+// function paginate(array, pgNumber, pgSize){
   // var numElements = array.length;
   // var resultArray = [];
   //
@@ -479,7 +495,7 @@ function paginate(array, pgNumber, pgSize){
   // }
   // console.log(resultArray);
 
-  console.log(array.slice(pgNumber, pgSize));
+  // console.log(array.slice(pgNumber, pgSize));
   //
   // var numElements = arr.length;
   // var resultArray = [];
@@ -489,16 +505,16 @@ function paginate(array, pgNumber, pgSize){
   //   console.log(start);
   // }
 
-  if(numElements){
-    var start = pageSize * (pgNumber -1);
-    var end = start + pageSize;
-  }
-  result = arr.slice(start, end);
-}
-
-paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 1, 3)
-
-paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 2)
+//   if(numElements){
+//     var start = pageSize * (pgNumber -1);
+//     var end = start + pageSize;
+//   }
+//   result = arr.slice(start, end);
+// }
+//
+// paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 1, 3)
+//
+// paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 2)
 
 
 // Define a function named deleteBetween that takes 3 arguments:
@@ -511,6 +527,11 @@ paginate([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 2)
 // Example: deleteBetween([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 'a', 'i') would return [ 'a', 'i' ]
 // Example: deleteBetween([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 'd', 'f') would return [ 'a', 'b', 'c', 'd', 'f', 'g', 'h', 'i' ]
 
+////SPLICE
+///start => the index to start at, includes number
+///end => counts up this number and includes this number
+////// mutates the original array! takes these numbers out
 
-////// mutates the original array!
-// See splice
+var arr1 = [0,2,3,4];
+
+console.log(arr1.splice(2,2));

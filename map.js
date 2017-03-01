@@ -57,22 +57,15 @@ countString(array);
 //strings are immutable!!!
 function capitalize(array){
   //return an array where each word has the first letter capitalized
-  // var result = array.map(function(word){
-  //   let cap = word[0].toUpperCase();
-  //   let wordArray = word.split('');
-  //   console.log(wordArray);
-  //   wordArray[0] = word[0].toUpperCase();
-  //   return wordArray.join('');
-  //   // return word.splice(1);
 
-    return array.map(word => {
+    return array.map(function(word){
       let wordArray = word.split('');
       wordArray[0] = word[0].toUpperCase();
-      return wordArray.joing('');
+      return wordArray.join('');
     });
 }
-capitalize("dog");
-console.log(capitalize('dog'));
+capitalize(array);
+console.log(capitalize(array));
 
 
 ////substring --> does not change original word

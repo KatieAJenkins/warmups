@@ -281,6 +281,8 @@ sumEdges([3,4,5]);
 // ---------
 //
 
+//does not mutate original array
+
 // Define a function named bassackwards that takes 2 arguments:
 //  - an array
 //  - a delimiter
@@ -317,6 +319,9 @@ bassackwards([3,4,5], "-");
 // // SORT & REVERSE
 // -----------------
 //
+
+//reverse --> mutates original array!
+//sort --> mutates original array!
 
 // Define a function named sortNumbers that takes  argument:
 //  - an array
@@ -374,6 +379,8 @@ array.sort().reverse();
 // Example: gather(['z','y'], ['a'], ['p', 'q', 'd']) would return [ 'a', 'd', 'p', 'q', 'y', 'z' ]
 //
 // NOTE: do not use any kind of loop to accomplish this.  Find the appropriate method in the docs
+
+//concat does not mutate array
 
 var array1 = ['a' ,'b'];
 var array2 = ['z' , 'y' ];
@@ -529,9 +536,35 @@ window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 
 ////SPLICE
 ///start => the index to start at, includes number
-///end => counts up this number and includes this number
+///end => counts up this number and does not include this number
 ////// mutates the original array! takes these numbers out
+///recursion - could send the modified array to the next function
 
 var arr1 = [0,2,3,4];
 
 console.log(arr1.splice(2,2));
+
+////Additional practice
+
+var arr1 = [0,2,3,4];
+
+console.log(arr1[0]);
+console.log(arr1.unshift()); //returns blank array, no arguments
+console.log(arr1.shift()); //returns value of 1st index
+
+//pass by reference --> two arrays that are the same will NOT equal each other because they are located in different place in memory!!! what ever changes you make, make them here in one location
+
+//with == : array cohericed to a string --> then compared to the string --> this equals true
+
+var arr1 = [1,2,3,4];
+var arr2 = "1,2,3,4";
+
+arr1 === arr2; //false
+arr1 == arr2; //true
+
+
+////PUSH
+//mutates array!!
+console.log(arr1);
+console.log(arr1.push("hi")); //will return the length of the new array --> 5
+console.log(arr1);

@@ -63,3 +63,33 @@ console.log(str.indexOf("information")); //9 bc the word information starts at i
 /////////CONCAT/////////
 //could take an array of strings and use spread operator to add strings together
 console.log(string1.concat('string to add to string' , 'another string to add'));
+
+
+////////TRIM///////
+//removes whitespace from both ends of string
+//creates a new string without whitepace
+//cannot mutate at string, would need to set is as a variable
+
+var string3 = '    whitespace   ';
+
+console.log(string3.trim());
+
+///////REMOVE SPACES IN MIDDLE AND JOIN ALL TOGETHER/////
+console.log(str.split(" ").join(""));
+
+///////REPLACE//////////
+//string.replace (regex or substring, newSubstring or function)
+//like a loop
+
+//will only replace the first space --> use RegEx to replace all the spaces with nothing
+console.log(str.replace(" ", ""));
+
+////////REPEAT///////
+///string.repeat(number of times of repeat, count)
+
+console.log(str.repeat(3));
+
+//////INCLUDES//////
+//string.includes(search value, optional: position to start searching from)// returns boolean
+
+console.log(str.includes("Chapter"));

@@ -58,7 +58,8 @@ function add5(array){
 
 function countString(array){
   //return an array with the length of each word in the array
-  var result = array.map(function(word) {
+  //can also pass in index and the array as arguments
+  var result = array.map(function(word , i, arr) {
     // console.log(word.length);
     return word.length;
   });
@@ -70,11 +71,10 @@ countString(array);
 // console.log(countString(array));
 
 function countString(array){
-  var result = array.map(function(word) {
+  //do not need to save into a result, will return
+  return array.map(function(word) {
     return word.length;
-  })
-  console.log(result);
-  return result;
+  });
 }
 
 //strings are immutable!!!

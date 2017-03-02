@@ -67,12 +67,15 @@ function findHeroNames(array){
 //return previous every time we are looping
 //current = this object
 function findHeroNames(array){
-  return array.reduce(function(current, previous) {
-    if (current.hero) {
-     previous.push(current.character);
-    };
+  return array.reduce(function(previous, current) {
+    if (current.hero === true) {
+      previous.push(current.character);
+      return previous;
+    }
+    else {
     console.log(previous);
     return previous;
+    }
   },
 
   ["this is starting point!"]); //[] is the 2nd argument to reduce function

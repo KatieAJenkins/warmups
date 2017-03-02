@@ -15,6 +15,14 @@ function multiplyBy10(array) {
   return result;
 }
 
+// function multiplyBy10(array) {
+//   var newArray = [];
+//   return arrayNums.map(number){
+//     return newArray.push(number * 10);
+//   }
+//   return newArray;
+// }
+
 //can call the argument anything...it is array[i] which is the value is passed in
 //set the results of array.map to a variable so we can return it after the function is done running
 
@@ -40,19 +48,34 @@ function add5(array){
 
 add5(arrayNums);
 
+function add5(array){
+  var result =  arrayNums.map(function(number){
+    return number + 5;
+  });
+  // console.log(result);
+  return result;
+}
+
 function countString(array){
   //return an array with the length of each word in the array
   var result = array.map(function(word) {
-    console.log(word.length);
+    // console.log(word.length);
     return word.length;
   });
-  console.log(result);
+  // console.log(result);
   return result;
 }
 
 countString(array);
 // console.log(countString(array));
 
+function countString(array){
+  var result = array.map(function(word) {
+    return word.length;
+  })
+  console.log(result);
+  return result;
+}
 
 //strings are immutable!!!
 function capitalize(array){

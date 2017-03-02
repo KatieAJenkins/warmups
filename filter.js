@@ -82,3 +82,12 @@ function findHeroNames(array){
 }
 
 console.log(findHeroNames(users));
+
+//can return arrays, objects, strings, numbers, etc!
+var array = [1,2,3,4];
+
+array.reduce(function(previous, current){
+  // console.log(previous + current);
+  return previous + current;
+  console.log(previous);
+}, 0);

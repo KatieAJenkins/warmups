@@ -73,12 +73,11 @@ function findHeroNames(array){
       return previous;
     }
     else {
-    console.log(previous);
-    return previous;
+      console.log(previous);
+      return previous; //need to continue to have access to this array so need to return here!
     }
   },
-
-  ["this is starting point!"]); //[] is the 2nd argument to reduce function
+  ["this is starting point!"]); //[] is the 2nd argument to reduce function === previous. will push into this array
 }
 
 console.log(findHeroNames(users));

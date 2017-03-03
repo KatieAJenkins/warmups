@@ -14,7 +14,7 @@
 //CAPS matter!!
 
 var string1 = "Wassup";
-var string2 = "Wtit up";
+var string2 = "Wait up";
 
 function firstTwo(string1, string2) {
 

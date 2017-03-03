@@ -1,4 +1,9 @@
 'use strict';
+
+//////////////////////////
+////////METHODS///////////
+//////////////////////////
+
 // ---------------
 // Create arrays
 // ---------------
@@ -216,11 +221,13 @@ function getSpeed(array, string){
 
 function cellValue(array1, array2, string){
   var array1Index =  array1.indexOf(string);
-  console.log(array1Index);
-  console.log(array2[array1Index]);
+  // console.log(array1Index);
+  // console.log(array2[array1Index]);
 }
 
-cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "model");
+cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "model"); //Nove
+
+cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "year"); //1977
 
 // -----------------
 // // PUSH & UNSHIFT

@@ -1,5 +1,10 @@
 'use strict';
-//map = for loop
+
+/////////////////////////
+//////////MAP////////////
+/////////////////////////
+
+//map = for loop through arrays
 
 var array = ["this", "is", "practice", "for", "map"];
 var arrayNums = [1,2,3,4,5];
@@ -94,4 +99,4 @@ console.log(capitalize(array));
 ////substring --> does not change original word
 var myWord = "my word";
   myWord.substring(0,2);
-  console.log();
+  console.log();//my

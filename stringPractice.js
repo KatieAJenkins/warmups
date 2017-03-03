@@ -44,7 +44,7 @@ var str = 'For more information, see Chapter 3.4.5.1';
 var re = /see (chapter \d+(\.\d)*)/i;
 var found = str.match(re);
 
-console.log(found);
+// console.log(found);
 
 // logs [ 'see Chapter 3.4.5.1',
 //        'Chapter 3.4.5.1',
@@ -61,12 +61,12 @@ console.log(found);
 /////////INDEXOF///////
 //gives you where the start index of the word you pass in
 
-console.log(str.indexOf("information")); //9 bc the word information starts at index 9
+// console.log(str.indexOf("information")); //9 bc the word information starts at index 9
 
 
 /////////CONCAT/////////
 //could take an array of strings and use spread operator to add strings together
-console.log(string1.concat('string to add to string' , 'another string to add'));
+// console.log(string1.concat('string to add to string' , 'another string to add'));
 
 
 ////////TRIM///////
@@ -76,27 +76,27 @@ console.log(string1.concat('string to add to string' , 'another string to add'))
 
 var string3 = '    whitespace   ';
 
-console.log(string3.trim());
+// console.log(string3.trim());
 
 ///////REMOVE SPACES IN MIDDLE AND JOIN ALL TOGETHER/////
-console.log(str.split(" ").join(""));
+// console.log(str.split(" ").join(""));
 
 ///////REPLACE//////////
 //string.replace (regex or substring, newSubstring or function)
 //like a loop
 
 //will only replace the first space --> use RegEx to replace all the spaces with nothing
-console.log(str.replace(" ", ""));
+// console.log(str.replace(" ", ""));
 
 ////////REPEAT///////
 ///string.repeat(number of times of repeat, count)
 
-console.log(str.repeat(3));
+// console.log(str.repeat(3));
 
 //////INCLUDES//////
 //string.includes(search value, optional: position to start searching from)// returns boolean
 
-console.log(str.includes("Chapter"));
+// console.log(str.includes("Chapter"));
 
 
 ///////REVERSE STRING///////////
@@ -107,35 +107,62 @@ console.log(str.includes("Chapter"));
 var word = "racecar";
 
 function reverseString(string) {
-  //split string into individual characters in array
-  //["r" , "a" , "c" ]
+  ////split string into individual characters in array
+  ////["r" , "a" , "c" ]
   var splitWord = string.split("");
-  console.log(splitWord);
-  //reverse the array of strings
+  // console.log(splitWord);
+  ////reverse the array of strings
   var reversedWord = splitWord.reverse();
-  console.log(reversedWord);
-  //join array back into string -->default delim is ,
-  //join back on spaces
+  // console.log(reversedWord);
+  ////join array back into string -->default delim is ,
+  ////join back on spaces
   var joined = reversedWord.join("");
-  console.log(joined);
+  // console.log(joined);
 
   if(joined === word){
-    console.log(true);
+    // console.log(true);
     return true;
   }
-  console.log(false);
+  // console.log(false);
     return false;
 }
 
 function reverseString(){
   var reversed = word.split("").reverse().join("");
-  console.log(reversed);
+  // console.log(reversed);
   if(reversed === word){
-    console.log(true);
+    // console.log(true);
     return true;
   }
-    console.log(false);
+    // console.log(false);
     return false;
 }
 
 reverseString(word);
+
+/////FIND ONLY VOWELS/////
+//Take an array of strings. Return an array of only the vowels in the strings
+
+//loop through array
+//array[i] will be string to remove all but vowels from
+//return new array with only vowels
+//filter, match, substring
+
+var arrayStrings = ['horse' , 'monkey' , 'cat']; // ['o', 'e', 'o', 'e', 'a']
+
+function vowelsOnly (array){
+ return array.map(function(word){
+   return word
+    .split('')
+    .filter((letter) => {
+      if(letter.match(/[AEIOU]/gi)){
+        return true;
+      }
+        return false;
+    })
+    .join('');
+  });
+}
+
+vowelsOnly(arrayStrings);
+console.log(vowelsOnly(arrayStrings));

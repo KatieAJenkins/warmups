@@ -146,7 +146,7 @@ reverseString(word);
 //loop through array
 //array[i] will be string to remove all but vowels from
 //return new array with only vowels
-//filter, match, substring
+//map, filter
 
 var arrayStrings = ['horse' , 'monkey' , 'cat']; // ['o', 'e', 'o', 'e', 'a']
 
@@ -166,3 +166,18 @@ function vowelsOnly (array){
 
 vowelsOnly(arrayStrings);
 console.log(vowelsOnly(arrayStrings));
+
+//map, reduce
+
+var array = [1,2,3,4, 5];
+
+function sum (array){
+  return array.reduce(function(previousNumber, currentNumber) {
+      console.log(previousNumber + currentNumber);
+    return previousNumber + currentNumber;
+
+  }, 0)//add starting value here which is 0
+
+}
+
+sum (array);

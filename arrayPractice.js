@@ -37,7 +37,7 @@ function weekdays() {
 
 function simpleAccess(array, index){
   // find value of index
-  console.log(array[index]);
+  // console.log(array[index]);
   return array[index];
 }
 
@@ -214,9 +214,13 @@ function getSpeed(array, string){
 // Example: cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "model") would return "Nova"
 // Example: cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "year") would return 1977
 
-function cellValue(){
-
+function cellValue(array1, array2, string){
+  var array1Index =  array1.indexOf(string);
+  console.log(array1Index);
+  console.log(array2[array1Index]);
 }
+
+cellValue(["make", "model", "year", "weight"], ["Chevy", "Nova", 1977, 1999], "model");
 
 // -----------------
 // // PUSH & UNSHIFT
@@ -242,7 +246,7 @@ let sammichArray = ['a', 'b'];
 function sandwich(array, value){
   sammichArray.push(value);
   // sammichArray.unshift(value);
-  console.log('push ', sammichArray);
+  // console.log('push ', sammichArray);
   // console.log('unshift ', sammichArray);
 }
 
@@ -278,7 +282,7 @@ sumEdges([3,4,5]);
 
 function testPop(array) {
   array.pop();
-  console.log('test pop' ,array);
+  // console.log('test pop' ,array);
 };
 
 testPop([3,4,5]);
@@ -307,7 +311,7 @@ function bassackwards(array, delimiter) {
   // console.log(bassArray.reverse().join("-"));
   var newArray = bassArray.reverse().join(delimiter);
   // console.log(newArray);
-  console.log(newArray.toString());
+  // console.log(newArray.toString());
 }
 
 //another method!
@@ -317,7 +321,7 @@ function bassackwards(array, delimiter){
     //take the first item in the bassArray and add to beginning of the new list
     newArr.unshift(array[i]);
   }
-    console.log(newArr.join(delimiter));
+    // console.log(newArr.join(delimiter));
 }
 
 bassackwards([3,4,5], "-");
@@ -396,8 +400,8 @@ var array3 = ["t" , "s"];
 function gather(arr1, arr2, arr3){
 
   var newArray = arr1.concat(arr2, arr3);
-  console.log(newArray);
-  console.log(newArray.sort());
+  // console.log(newArray);
+  // console.log(newArray.sort());
 }
 
 gather(array1, array2, array3);
@@ -412,10 +416,10 @@ var newArray = array1.concat(array2,array3);
 
 //mutate original array
 array1 = array1.concat(array2,array3);
-console.log(array1);
+// console.log(array1);
 
 //can start with a blank array
-console.log([].concat(array1, array2, array3));
+// console.log([].concat(array1, array2, array3));
 
 // ----------
 // // FILTER
@@ -549,15 +553,15 @@ window([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ], 3, 6);
 
 var arr1 = [0,2,3,4];
 
-console.log('splice ', arr1.splice(2,2));
+// console.log('splice ', arr1.splice(2,2));
 
 ////Additional practice
 
 var arr1 = [0,2,3,4];
 
-console.log(arr1[0]);
-console.log(arr1.unshift()); //returns blank array, no arguments
-console.log(arr1.shift()); //returns value of 1st index
+// console.log(arr1[0]);
+// console.log(arr1.unshift()); //returns blank array, no arguments
+// console.log(arr1.shift()); //returns value of 1st index
 
 //pass by reference --> two arrays that are the same will NOT equal each other because they are located in different place in memory!!! what ever changes you make, make them here in one location
 
@@ -572,6 +576,6 @@ arr1 == arr2; //true
 
 ////PUSH
 //mutates array!!
-console.log(arr1);
-console.log(arr1.push("hi")); //will return the length of the new array --> 5
-console.log(arr1);
+// console.log(arr1);
+// console.log(arr1.push("hi")); //will return the length of the new array --> 5
+// console.log(arr1);

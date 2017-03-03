@@ -93,3 +93,34 @@ console.log(str.repeat(3));
 //string.includes(search value, optional: position to start searching from)// returns boolean
 
 console.log(str.includes("Chapter"));
+
+
+///////REVERSE STRING///////////
+//Reverse a string and check if it is the same as the original string --> pallendrome check!
+//result = array
+//splits string into array of substrings on delimeter
+
+var word = "racecar";
+
+function reverseString(string) {
+  //split string into individual characters in array
+  //["r" , "a" , "c" ]
+  var splitWord = string.split("");
+  console.log(splitWord);
+  //reverse the array of strings
+  var reversedWord = splitWord.reverse();
+  console.log(reversedWord);
+  //join array back into string -->default delim is ,
+  //join back on spaces
+  var joined = reversedWord.join("");
+  console.log(joined);
+
+  if(joined === word){
+    console.log(true);
+    return true;
+  }
+  console.log(false);
+    return false;
+}
+
+reverseString(word);

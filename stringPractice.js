@@ -123,4 +123,15 @@ function reverseString(string) {
     return false;
 }
 
+function reverseString(){
+  var reversed = word.split("").reverse().join("");
+  console.log(reversed);
+  if(reversed === word){
+    console.log(true);
+    return true;
+  }
+    console.log(false);
+    return false;
+}
+
 reverseString(word);

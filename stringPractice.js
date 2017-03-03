@@ -175,9 +175,16 @@ function sum (array){
   return array.reduce(function(previousNumber, currentNumber) {
       console.log(previousNumber + currentNumber);
     return previousNumber + currentNumber;
-
-  }, 0)//add starting value here which is 0
-
+  }, 0);//add starting value here which is 0
 }
 
 sum (array);
+
+function productAll(array) {
+  return array.reduce(function(previousNumber, currentNumber) {
+    return previousNumber * currentNumber;
+  }, 1);//can't multiply by 0 bc answer would always be 0
+};
+
+productAll(array);
+console.log(productAll(array));

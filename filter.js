@@ -74,7 +74,7 @@ function findHeroNames(array){
     }
     else {
       console.log(previous);
-      return previous; //need to continue to have access to this array so need to return here!
+      uce javareturn previous; //need to continue to have access to this array so need to return here!
     }
   },
   ["this is starting point!"]); //[] is the 2nd argument to reduce function === previous. will push into this array

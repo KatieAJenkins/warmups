@@ -117,7 +117,7 @@ function arrayToObject (array) {
 
 arrayToObject(testArr);
 
-let prop = 'middle';
+let prop = 'first';
 
 let testArr1 = [
   {first: 'Kilian', middle: 'Lee', last: 'Jornet'},
@@ -129,19 +129,19 @@ let testArr2 = [
   {first: 'Rob', last: 'Krar'}
 ];
 
-function someObjsContainProp (arr, prop) {
-  return arr.some(function(arrProp){
-    console.log(arrProp);
-    console.log(prop);
-    // console.log(prop === arrProp);
-    if(arrProp.hasOwnProperty(prop)){
-      console.log(true);
-      return true;
-    }
-      console.log(false);
-      return false;
-  });
-}
+// function someObjsContainProp (arr, prop) {
+//   return arr.some(function(arrProp){
+//     console.log(arrProp);
+//     console.log(prop);
+//     // console.log(prop === arrProp);
+//     if(arrProp.hasOwnProperty(prop)){
+//       console.log(true);
+//       return true;
+//     }
+//       console.log(false);
+//       return false;
+//   });
+// }
 
 
 // function someObjsContainProp (arr, prop){
@@ -154,8 +154,33 @@ function someObjsContainProp (arr, prop) {
 //   return false;
 // }
 
-someObjsContainProp(testArr2, prop);
+// someObjsContainProp(testArr2, prop);
 // console.log(someObjsContainProp(testArr1, prop));
+
+////Object has own property  objContainsProp: (arr, prop) => {
+// function objContainsProp(arr, prop){
+//   for (var i = 0; i < arr.length; i++){
+//     if(!arr[i].hasOwnProperty(prop)){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+function objContainsProp(arr, prop){
+  return arr.every(function(arrProp) {
+    console.log(arrProp);
+    if(arrProp.hasOwnProperty(prop)){
+      console.log(true);
+      return true;
+    }
+      console.log(false);
+      return false;
+  });
+}
+
+console.log(objContainsProp(testArr2, prop));
+
 
 ////substring --> does not change original word
 var myWord = "my word";

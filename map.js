@@ -181,21 +181,19 @@ let testArr2 = [
 //
 // console.log(objContainsProp(testArr2, prop));
 
-var string = 'middle';
+let testArr4 = ['apples', 'bananas', 'grapes', 'oranges', 'watermelon'];
+
+var string = 'te';
 
 /////////find matching strings in array
-function stringMatch (arr, str) {
- return testArr2.filter(function(obj) {
-   if(obj.hasOwnProperty(str)) {
-     console.log(true);
-     return true;
-   }
-   console.log(false);
-   return false;
- });
+function stringMatch(array, string) {
+  return array.filter(function(element) {
+    console.log(element);
+    return element.toLowerCase().indexOf(string.toLowerCase()) > -1;
+  });
 }
 
-console.log(stringMatch(testArr2, string));
+console.log(stringMatch(testArr4, string));
 
 
 ////substring --> does not change original word

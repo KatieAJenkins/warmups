@@ -167,19 +167,35 @@ let testArr2 = [
 //   return true;
 // }
 
-function objContainsProp(arr, prop){
-  return arr.every(function(arrProp) {
-    console.log(arrProp);
-    if(arrProp.hasOwnProperty(prop)){
-      console.log(true);
-      return true;
-    }
-      console.log(false);
-      return false;
-  });
+// function objContainsProp(arr, prop){
+//   return arr.every(function(arrProp) {
+//     console.log(arrProp);
+//     if(arrProp.hasOwnProperty(prop)){
+//       console.log(true);
+//       return true;
+//     }
+//       console.log(false);
+//       return false;
+//   });
+// }
+//
+// console.log(objContainsProp(testArr2, prop));
+
+var string = 'middle';
+
+/////////find matching strings in array
+function stringMatch (arr, str) {
+ return testArr2.filter(function(obj) {
+   if(obj.hasOwnProperty(str)) {
+     console.log(true);
+     return true;
+   }
+   console.log(false);
+   return false;
+ });
 }
 
-console.log(objContainsProp(testArr2, prop));
+console.log(stringMatch(testArr2, string));
 
 
 ////substring --> does not change original word

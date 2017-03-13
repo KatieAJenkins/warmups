@@ -95,6 +95,66 @@ function capitalize(array){
 capitalize(array);
 console.log(capitalize(array));
 
+let testArr = [['Jennie', 'Zinko'], ['Amy', 'Marzulla'], ['Dakota', 'Jones']];
+//[{first: 'Jennie', last: 'Zinko'}, {first: 'Amy', last: 'Marzulla'}, {first: 'Dakota', last: 'Jones'}]
+
+function arrayToObject (array) {
+  let personArray = [];
+  return array.map(function(name) {
+    var personObject = {};
+    // console.log(name);
+    // console.log(name[0]);
+    personObject.first = name[0];
+    // console.log(personObject.first);
+    personObject.last = name[1];
+    // console.log(personObject.last);
+    // console.log(personObject);
+    personArray.push(personObject)
+    // console.log(personArray);
+    return personArray;
+  });
+}
+
+arrayToObject(testArr);
+
+let prop = 'first';
+
+// function someObjsContainProp (arr, prop) {
+//   return arr.some(function(prop){
+//     console.log(prop);
+//     console.log(arr);
+//     if(arr.hasOwnProperty(prop)) {
+//       console.log(true);
+//       return true;
+//     }
+//     // if(arr[i].hasOwnProperty(prop)) {
+//     //   return true;
+//     // }
+//   });
+// }
+
+let testArr1 = [
+  {first: 'Kilian', middle: 'Lee', last: 'Jornet'},
+  {first: 'Anna', last: 'Frost'}
+];
+
+let testArr2 = [
+  {first: 'Emilie', last: 'Forsberg'},
+  {first: 'Rob', last: 'Krar'}
+];
+
+function someObjsContainProp (arr, prop){
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].hasOwnProperty(prop)){
+      console.log(true);
+      return true;
+    }
+  }
+  return false;
+}
+
+someObjsContainProp(testArr1, prop);
+console.log(someObjsContainProp(testArr1, prop));
 
 ////substring --> does not change original word
 var myWord = "my word";

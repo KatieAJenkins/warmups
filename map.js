@@ -117,21 +117,7 @@ function arrayToObject (array) {
 
 arrayToObject(testArr);
 
-let prop = 'first';
-
-// function someObjsContainProp (arr, prop) {
-//   return arr.some(function(prop){
-//     console.log(prop);
-//     console.log(arr);
-//     if(arr.hasOwnProperty(prop)) {
-//       console.log(true);
-//       return true;
-//     }
-//     // if(arr[i].hasOwnProperty(prop)) {
-//     //   return true;
-//     // }
-//   });
-// }
+let prop = 'middle';
 
 let testArr1 = [
   {first: 'Kilian', middle: 'Lee', last: 'Jornet'},
@@ -143,18 +129,33 @@ let testArr2 = [
   {first: 'Rob', last: 'Krar'}
 ];
 
-function someObjsContainProp (arr, prop){
-  for(var i = 0; i < arr.length; i++){
-    if(arr[i].hasOwnProperty(prop)){
+function someObjsContainProp (arr, prop) {
+  return arr.some(function(arrProp){
+    console.log(arrProp);
+    console.log(prop);
+    // console.log(prop === arrProp);
+    if(arrProp.hasOwnProperty(prop)){
       console.log(true);
       return true;
     }
-  }
-  return false;
+      console.log(false);
+      return false;
+  });
 }
 
-someObjsContainProp(testArr1, prop);
-console.log(someObjsContainProp(testArr1, prop));
+
+// function someObjsContainProp (arr, prop){
+//   for(var i = 0; i < arr.length; i++){
+//     if(arr[i].hasOwnProperty(prop)){
+//       console.log(true);
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+someObjsContainProp(testArr2, prop);
+// console.log(someObjsContainProp(testArr1, prop));
 
 ////substring --> does not change original word
 var myWord = "my word";

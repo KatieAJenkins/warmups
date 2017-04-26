@@ -9,9 +9,9 @@ var str2 = "toot";
 
 function reverse(word){
   return word.split('').reduce(function(prev,curr){
-    console.log(word);
-    console.log('prev ', prev);
-    console.log('curr ', curr);
+    // console.log(word);
+    // console.log('prev ', prev);
+    // console.log('curr ', curr);
     prev.unshift(curr);
     return prev;
   },[]).join('');
@@ -183,7 +183,14 @@ let arrayNumbers = [1,2,3,4];
 //
 // console.log('numSum ', numSum);
 
-var numObject = arrayNumbers.reduce(function(accumulator, currentValue){
-  console.log(accumulator);
-
+var numObject = arrayNumbers.reduce(function(newObject, currentValue){
+  console.log('accumulator ', newObject);
+  console.log('currentValue ', currentValue);
+  //to set new key in Object: newObject[key]
+  //to set value: newObject[key] = value;
+  console.log('key in Object ' , newObject[currentValue]);
+  console.log('emptyObject + key', newObject[currentValue] = currentValue + 1);
+  return newObject;
 }, {});
+
+console.log(numObject);

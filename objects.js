@@ -1,3 +1,5 @@
+'use strict';
+
 // removeBadPeople(people);
 // // => [{name:'A', age: 20}, {name:'B', age: 30}];
 
@@ -31,15 +33,29 @@ var people = [{name:'A', age: 20}, {name:'B', age: 30}, {}, {name:'', age: 10}];
 // sumAgesAll(people);
 // => 60
 
-function sumAgesAll(people) {
-	var result = 0;
+// function sumAgesAll(people) {
+// 	var result = 0;
+//
+// 	for(var i = 0; i < people.length; i++) {
+// 		if (!isNaN(people[i].age)) {
+// 			result += people[i].age;
+// 		}
+// 	}
+// 	return result;
+// }
+//
+// sumAgesAll(people);
 
-	for(var i = 0; i < people.length; i++) {
-		if (!isNaN(people[i].age)) {
-			result += people[i].age;
-		}
+///////write a function that takes an array and returns an object with the keys as the array[i] and the value the number of times array[i] shows in the array
+
+var array1 = ['dog' , 'cat', 'dog', 'horse'];
+
+function countArray(array){
+	var obj = {};
+	for (var i =0; i < array.length; i++){
+		if(array[i] === obj[i])
 	}
-	return result;
 }
 
-sumAgesAll(people);
+
+countArray(array1);

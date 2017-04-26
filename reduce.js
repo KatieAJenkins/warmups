@@ -9,10 +9,15 @@ var str2 = "toot";
 
 function reverse(word){
   return word.split('').reduce(function(prev,curr){
+    console.log(word);
+    console.log('prev ', prev);
+    console.log('curr ', curr);
     prev.unshift(curr);
     return prev;
   },[]).join('');
 }
+
+reverse(str);
 
 // console.log(str === reverse(str), str, reverse(str));
 // console.log(str2 === reverse(str2), str2, reverse(str2));
@@ -75,7 +80,7 @@ function findLargest(numbers){
   //   return prev;
   // })
 }
-console.log(findLargest(numbers));
+// console.log(findLargest(numbers));
 
 
 // Using reduce, write a function that takes an object/hash/dictionary of people (keys) and their subsequent ages as its argument, and then it returns the name of the oldest living person.
@@ -101,13 +106,13 @@ function findOldest(people){
   //
   // return oldestPerson.name;
   return people.reduce(function(totalAgeSoFar,currentPerson){
-    console.log("totalAgeSoFar:", totalAgeSoFar);
+    // console.log("totalAgeSoFar:", totalAgeSoFar);
     totalAgeSoFar += currentPerson.age;
     return totalAgeSoFar;
   },10);
 }
 
-console.log(findOldest(people));
+// console.log(findOldest(people));
 
 /////3 Ways Find Largest of Numbers///////
 var numbers = [1,5,2,334,5,10];
@@ -151,3 +156,34 @@ var numbers = [1,5,2,334,5,10];
 //higher order function
 //sum up things ==> accumulator function
 //return --> pass this number back into function
+
+
+////////Original Practice///////////
+let arrayNumbers = [1,2,3,4];
+
+// function sum(array){
+//   var numSum = arrayNumbers.reduce(function(startingValue, currentValue){
+//     console.log(array);
+//     console.log('accumulator', startingValue);
+//     console.log('currentValue ', currentValue);
+//     console.log(startingValue + currentValue);
+//     return startingValue + currentValue;
+//   }, 10);
+//   console.log('numSum', numSum);
+// }
+//
+// sum(arrayNumbers);
+
+// var numSum = arrayNumbers.reduce(function(startingValue, currentValue){
+//   console.log('accumulator', startingValue);
+//   console.log('currentValue ', currentValue);
+//   console.log(startingValue + currentValue);
+//   return startingValue + currentValue;
+// }, 0);
+//
+// console.log('numSum ', numSum);
+
+var numObject = arrayNumbers.reduce(function(accumulator, currentValue){
+  console.log(accumulator);
+
+}, {});

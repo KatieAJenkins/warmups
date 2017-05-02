@@ -100,9 +100,18 @@ var string3 = '    whitespace   ';
 
 
 ///////REVERSE STRING///////////
-//Reverse a string and check if it is the same as the original string --> pallendrome check!
-//result = array
-//splits string into array of substrings on delimeter
+//Pallendrome check! Reverse a string and return true if it is the same as the original string & false if they are different.
+//Use string methods to accomplish this.
+
+//Review documentation for guidance: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+//INPUT = string
+//let string = "racecar"
+
+//OUTPUT = boolean
+//true
+
+//split = splits string into array of substrings on delimeter
 
 var word = "racecar";
 
@@ -127,9 +136,32 @@ function reverseString(string) {
     return false;
 }
 
-function reverseString(){
+// console.log(reverseString(word));
+
+function reverseStringLoop(string){
+  let reversedArray = [];
+  let newString = "";
+  for(var i = 0; i < word.length; i++){
+    reversedArray.unshift(word[i]);
+    // console.log(word[i]);
+    let newString = reversedArray.join('');
+    console.log(newString);
+  }
+  if(newString === word){
+    console.log(newString);
+    console.log('true');
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+reverseStringLoop(word);
+
+function reverseString(word){
   var reversed = word.split("").reverse().join("");
-  // console.log(reversed);
+  // console.log('reversed', reversed);
   if(reversed === word){
     // console.log(true);
     return true;
@@ -138,7 +170,7 @@ function reverseString(){
     return false;
 }
 
-reverseString(word);
+console.log(reverseString(word));
 
 /////FIND ONLY VOWELS/////
 //Take an array of strings. Return an array of only the vowels in the strings
@@ -165,7 +197,7 @@ function vowelsOnly (array){
 }
 
 vowelsOnly(arrayStrings);
-console.log(vowelsOnly(arrayStrings));
+// console.log(vowelsOnly(arrayStrings));
 
 //map, reduce
 
@@ -173,12 +205,12 @@ var array = [1,2,3,4, 5];
 
 function sum (array){
   return array.reduce(function(previousNumber, currentNumber) {
-      console.log(previousNumber + currentNumber);
+      // console.log(previousNumber + currentNumber);
     return previousNumber + currentNumber;
   }, 0);//add starting value here which is 0
 }
 
-sum (array);
+// sum (array);
 
 function productAll(array) {
   return array.reduce(function(previousNumber, currentNumber) {
@@ -187,4 +219,4 @@ function productAll(array) {
 };
 
 productAll(array);
-console.log(productAll(array));
+// console.log(productAll(array));

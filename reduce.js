@@ -194,3 +194,48 @@ var numObject = arrayNumbers.reduce(function(newObject, currentValue){
 }, {});
 
 console.log(numObject);
+
+var users =
+  [
+    { fullName: 'George Washington', email: 'george@us.gov' },
+    { fullName: 'John Adams', email: 'john@us.gov' },
+    { fullName: 'Thomas Jefferson', email: 'thomas@us.gov' },
+    { fullName: 'James Madison', email: 'james@us.gov' }
+  ];
+
+             // { 'George Washington': 'george@us.gov',
+             //   'John Adams': 'john@us.gov',
+             //   'Thomas Jefferson': 'thomas@us.gov',
+             //   'James Madison': 'james@us.gov' }
+
+//get the value of the fullName/email from the 1st object
+console.log(users[0].fullName);
+console.log(users[0].email);
+
+//get the 1st full object in the array
+// console.log(users[0]);
+users.reduce(function(usersObject, user){
+  // console.log(user.email);
+  console.log(usersObject[user.fullName] = user.email);
+  return usersObject;
+},
+{});
+
+//get the value of the object key
+// for(var user in users){
+//   //full array of objects
+//   console.log('users ', users);
+//
+//   //get the index of the user
+//   console.log('user ',user);
+//
+//   //get the object in index 1
+//   console.log('users 1', users[1]);
+//
+//   //will give you each object --> this is how you look at each one in the array
+//   console.log('users + user ', users[user]);
+//
+//   //get value out of keys ==> get obj[key] and use dot notation to get value
+//   console.log(users[user].fullName);
+//   console.log(users[user].email);
+// }

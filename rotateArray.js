@@ -15,7 +15,7 @@ function toRight(array, number){
     //unshift popped number to the front
     console.log(array.unshift(array.pop()));
   }
-  // console.log(array);
+  console.log(array);
   return array;
 }
 

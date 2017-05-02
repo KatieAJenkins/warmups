@@ -53,8 +53,12 @@ var array1 = ['dog' , 'cat', 'dog', 'horse'];
 function countArray(array){
 	var obj = {};
 	for (var i =0; i < array.length; i++){
-		if(array[i] === obj[i])
+		if(array[i] === obj[i]){
+			console.log('what');
+		}
 	}
+	console.log(obj);
+
 }
 
 

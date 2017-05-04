@@ -7,16 +7,35 @@
 
 var array = [1,2,3,4,5,6,7];
 
-function toRight(array, number){
-  //loop through array number of times you want to rotate
-    // array.unshift(array.pop());
-  for(var i = 0; i < number; i++){
-    //pop the last number
-    //unshift popped number to the front
-    console.log(array.unshift(array.pop()));
-  }
-  console.log(array);
-  return array;
-}
+// function toRight(array, number){
+//   //loop through array number of times you want to rotate
+//     // array.unshift(array.pop());
+//   for(var i = 0; i < number; i++){
+//     //pop the last number
+//     //unshift popped number to the front
+//     console.log(array.unshift(array.pop()));
+//   }
+//   console.log(array);
+//   return array;
+// }
 
 toRight(array, 3);
+
+function toRight(array, number){
+  let steppedArray = [];
+  for(var i = 0; i < number; i++){
+    console.log(array);
+    // console.log(array);
+    // console.log(steps);
+    // console.log(array.pop(array[i]));
+    var popped = array.pop(array[i]);
+    console.log(popped);
+    array.unshift(popped);
+    console.log(steppedArray);
+    console.log(array);
+  }
+  // let popped
+
+  // console.log(steppedArray);
+  // return steppedArray;
+}
